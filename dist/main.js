@@ -16,21 +16,50 @@ function start(e){
 	function validate(e){
 		var foundError = true;
 
-		if(foundError === true){
-			$("#passwordLabel").siblings("#error").addClass("active-error").html("Please input a valid email and password before logging in.");
+		// if(foundError === true){
+		// 	$("#passwordLabel").siblings("#error").addClass("active-error").html("Please input a valid email and password before logging in.");
+		// }
+		if($name.val() === ""){
+			foundError = true;
+			$("#username").siblings("#name-error").addClass("active-error").html("Please input a valid email address");
 		}
-		if($name.val() === "aaron@theironyard.com" && $password.val() === "password123" ){
+		if($password.val() === ""){
+			foundError = true;
+			$("#passwordLabel").siblings("#password-error").addClass("active-error").html("Please input a valid password");
+		}
+		if($name.val() === "aaron@theironyard.com" || "admin@google.com" || "zamora.mariac@gmail.com" && $password.val() === ""){
+			foundError = true;
+			$("#passwordLabel").siblings("#password-error").addClass("active-error").html("Please enter your password");
+		}
+
+
+		if($name.val() === "aaron@theironyard.com" && $password.val() === "password123"){
 			foundError = false;
-			$("#passwordLabel").siblings("#error").removeClass("active-error");
+			$("#passwordLabel").siblings("#password-error").removeClass("active-error");
+		}else{
+			foundError = true;
+			$("#passwordLabel").siblings("#password-error").addClass("active-error").html("Password was incorrect");
 		}
-		if($name.val() == "admin@google.com" && $password.val() == "pandas" ){
+
+
+
+		if($name.val() == "admin@google.com" && $password.val() === "pandas" ){
 			foundError = false;
-			$("#passwordLabel").siblings("#error").removeClass("active-error");
+			$("#passwordLabel").siblings("#password-error").removeClass("active-error");
+		}else{
+			foundError = true;
+			$("#passwordLabel").siblings("#password-error").addClass("active-error").html("Password was incorrect");
 		}
-		if($name.val() == "zamora.mariac@gmail.com" && $password.val() == "honeycrisp" ){
+		
+		if($name.val() == "zamora.mariac@gmail.com" && $password.val() === "honeycrisp" ){
 			foundError = false;
-			$("#passwordLabel").siblings("#error").removeClass("active-error");
+			$("#passwordLabel").siblings("#password-error").removeClass("active-error");
+		}else{
+			foundError = true;
+			$("#passwordLabel").siblings("#password-error").addClass("active-error").html("Password was incorrect");
 		}
+		
+
 		console.log(foundError);
 		if(foundError === false){
 			window.location.href = "http://theironyard.com"
