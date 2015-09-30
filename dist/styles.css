@@ -1,0 +1,56 @@
+.top{
+	background-image: url(images/bg-login-top.png);
+	height:110px;
+	width:100%;
+	padding-top: 200px;
+	position: relative;
+	border-bottom-style: solid;
+	border-bottom-color: #565753;
+}
+.center{
+	margin: auto;
+	display: block;
+}
+.bottom {
+	background-image: url(images/bg-login.png);
+	height: 420px;
+}
+form{
+	text-align: center;
+}
+input {
+	border-radius: 5px;
+	margin:6px 0;
+	height:23px;
+	width: 200px;
+	border-style: none;
+	margin-left: 10px;
+	color:black;
+	font-size: 15px;
+
+}
+p{
+	display: none;
+}
+label{
+	font-size: 13px;
+	font-family: arial;
+	color: white;
+	display: block;
+
+}
+button{
+	margin-left: 28%;
+	border-style: none;
+	font-size: 13px;
+	border-radius: 5px;
+	background-color: #569B1E;
+	color:white;
+	width:70px;
+}
+.active-error{
+	display: block;
+	color:red;
+	font-weight: bold;
+}
+

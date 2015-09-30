@@ -2,19 +2,33 @@
 <html>
 <head>
 	<title> Login TreeLab</title>
-<link rel="stylesheet" type="text/css" href="login.css">
+<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
 
-
+<section class="top"> <img src="images/treemoLabs-logo.png" class="center"></section>
+	<section class="bottom">	
+		<form id="form-box">
+		<label id="usernameLabel">Username
+			<input type="text" id="username">
+		</label>
+		<label id="passwordLabel">Password  
+			<input type="password" id="password">
+		</label>
+		<button id="btn"> Sign in</button>
+		<p id="error"></p>
+		</form>
+	</section>
 
 
 
 
 <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js">
 </script>
-<script type="text/javascript" src="login.js">
+<script type="text/javascript" src="main.js">
 	
 </script>
 </body>
 </html>
+
+		
